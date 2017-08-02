@@ -1,0 +1,24 @@
+{
+  "presets": ["react", "airbnb"],
+  "env": {
+    "production": {
+      "plugins": []
+    },
+    "development": {
+      "plugins": [
+        [
+          "react-transform",
+          {
+            "transforms": [
+              {
+                "transform": "react-transform-hmr",
+                "imports": ["react"],
+                "locals": ["module"]
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  }
+}
