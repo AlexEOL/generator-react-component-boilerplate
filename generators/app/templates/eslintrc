@@ -19,6 +19,7 @@
     "arrow-body-style": 0,
     "import/imports-first": 0,
     "import/no-extraneous-dependencies": 0,
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": 0,
+    "linebreak-style": 0
   }
 }
