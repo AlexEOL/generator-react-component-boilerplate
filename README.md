@@ -39,7 +39,7 @@ Preview your component with LiveReload:
 npm run dev
 ```
 
-A webserver will be started on [localhost:8000](http://localhost:8000) running the examples in `example/src`.
+A webserver will be started on [localhost:8000](http://localhost:8000).
 
 You can use this playpen to test your component, and then publish it as live examples to GitHub Pages, which is a great way to let potential users try out your component and see what it can do.
 
