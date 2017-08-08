@@ -49,6 +49,10 @@ You can use this playpen to test your component, and then publish it as live exa
 npm run build
 ```
 
+```bash
+npm publish
+```
+
 ## Feedback?
 
 Open an issue, submit a PR or write on my email (Alexander.Melnik90@yandex.ru).
