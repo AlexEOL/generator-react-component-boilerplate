@@ -22,10 +22,40 @@ yo react-component-boilerplate
  * Yeoman is a person with feelings and opinions, but is very easy to work with.
  * Yeoman can be too opinionated at times but is easily convinced not to be.
  * Feel free to [learn more about Yeoman](http://yeoman.io/).
+ 
+## How to develop your component
+
+### Source
+
+Your component source code is in src. You can use JSX and ES6 syntax freely in your component source; it will be transpiled to lib with Babel before being published to npm so that your users will simply be able to include it.
+
+It's a great idea to add a description, documentation and other information to your README.md file, to help people who are interested in using your component.
+
+### Example & Preview
+
+Preview your component with LiveReload:
+
+```bash
+npm run dev
+```
+
+A webserver will be started on [localhost:8000](http://localhost:8000) running the examples in `example/src`.
+
+You can use this playpen to test your component, and then publish it as live examples to GitHub Pages, which is a great way to let potential users try out your component and see what it can do.
+
+### Build and Publish
+
+```bash
+npm run build
+```
+
+## Feedback?
+
+Open an issue, submit a PR or write on my email (Alexander.Melnik90@yandex.ru).
 
 ## License
 
- © [Alexander Melnik]()
+ [MIT License](http://en.wikipedia.org/wiki/MIT_License). Copyright © 2016 AlexEOL
 
 
 [npm-image]: https://badge.fury.io/js/generator-react-component-boilerplate.svg
