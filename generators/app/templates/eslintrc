@@ -20,6 +20,16 @@
     "import/imports-first": 0,
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
-    "linebreak-style": 0
+    "linebreak-style": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/require-default-props": 0,
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "ignore"
+    }],
+    "import/first": 0
   }
 }

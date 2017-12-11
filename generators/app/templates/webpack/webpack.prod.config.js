@@ -8,7 +8,9 @@ module.exports = function (baseConfig) {
       umdNamedDefine: true
     }),
     externals: {
-      'react': true,
+      react: true,
+      classnames: true,
+      'prop-types': true,
     },
     entry: {
       main: [
@@ -16,7 +18,6 @@ module.exports = function (baseConfig) {
       ]
     },
     plugins: []
-      .concat(require('./helpers/plugins/dedupe'))
       .concat(require('./helpers/plugins/css'))
       .concat(require('./helpers/plugins/uglify'))
   });

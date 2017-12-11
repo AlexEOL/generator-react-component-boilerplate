@@ -1,4 +1,4 @@
-const atImport = require("postcss-smart-import");
+const atImport = require('postcss-smart-import');
 const autoprefixer = require('autoprefixer');
 const rucksack = require('rucksack-css');
 const csswring = require('csswring');

@@ -1,21 +1,17 @@
-const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
   cache: false,
 
-  debug: false,
-
   watch: false,
 
-  devtool: null,
+  devtool: false,
 
   target: 'web',
 
   resolve: {
-    root: path.normalize(__dirname + '/../src'),
-    extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx', '.css', '.scss', '.saas'],
-    modulesDirectories: ['node_modules', 'src']
+    extensions: ['.js', '.jsx', '.css', '.scss', '.saas'],
+    modules: ['node_modules', 'src']
   },
 
   entry: {},
@@ -34,13 +30,13 @@ module.exports = {
   ],
 
   module: {
-    loaders: [
-      require('./helpers/loaders/css'),
-      require('./helpers/loaders/scss'),
-      require('./helpers/loaders/babel')
-      // require('./helpers/loaders/images'),
-    ].concat(require('./helpers/loaders/fonts'))
+    rules: [
+      require('./helpers/rules/css'),
+      // require('./helpers/rules/scss'),
+      require('./helpers/rules/babel'),
+      // require('./helpers/rules/images'),
+    ].concat(require('./helpers/rules/fonts'))
   },
 
-  postcss: require('./helpers/postcss')
+  // postcss: require('./helpers/postcss')
 };

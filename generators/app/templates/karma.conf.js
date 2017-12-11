@@ -12,9 +12,14 @@ module.exports = function (config) {
     frameworks: ['jasmine'],
 
     files: [
-      // webpackFiles,
-      'tests/**/*.js',
-      'tests/**/*.jsx'
+      {
+        pattern: 'tests/**/*.js',
+        watched: false,
+      },
+      {
+        pattern: 'tests/**/*.jsx',
+        watched: false,
+      },
     ],
 
     preprocessors: {
@@ -33,8 +38,8 @@ module.exports = function (config) {
       'karma-phantomjs-launcher'
     ],
 
-    webpackServer: {
-      noInfo: true,
+    webpackMiddleware: {
+      stats: 'errors-only'
     },
   });
 };

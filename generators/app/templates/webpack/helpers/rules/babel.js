@@ -1,5 +1,5 @@
 module.exports = {
   test: /\.(jsx?)$/,
   exclude: /(node_modules)/,
-  loaders: ['babel', 'eslint']
+  use: ['babel-loader', 'eslint-loader'],
 };

@@ -1,21 +1,21 @@
-'use strict';
-var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
-var yosay = require('yosay');
+"use strict";
+var yeoman = require("yeoman-generator");
+var chalk = require("chalk");
+var yosay = require("yosay");
 var _ = require("lodash");
 
 module.exports = yeoman.Base.extend({
   prompting_init: function () {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the rad ' + chalk.red('generator-react-component-boilerplate') + ' generator!'
+      "Welcome to the rad " + chalk.red("generator-react-component-boilerplate") + " generator!"
     ));
 
     const prompts = [
       {
         type: "input",
         name: "projectName",
-        message: "What is your Package project name? (e.g., 'new-component')",
+        message: "What is your Package project name? (e.g., "new-component")",
         default: "new-component"
       }
     ];
@@ -23,7 +23,7 @@ module.exports = yeoman.Base.extend({
     return this.prompt(prompts).then(function (props) {
       this.props = props;
       this.props.packageName = _.kebabCase(_.deburr(this.props.projectName));
-      this.props.packageDescription = '';
+      this.props.packageDescription = "";
       this.props.componentName = this.props.packageName
         .replace(/^\s+|\s+$/g, "")
         .replace(/(^|[-_ ])+(.)/g, function (match, first, second) {
@@ -50,7 +50,7 @@ module.exports = yeoman.Base.extend({
         type: "input",
         name: "developerName",
         message: "What is your name? (for copyright notice, etc.)"
-      }
+      },
     ];
 
     return this.prompt(prompts).then(function (props) {
@@ -121,8 +121,8 @@ module.exports = yeoman.Base.extend({
         this.destinationPath("tests/.eslintrc")
       );
       this.fs.copyTpl(
-        this.templatePath("tests/_component.spec.jsx"),
-        this.destinationPath("tests/" + this.props.packageName + ".spec.jsx"),
+        this.templatePath("tests/_component.spec.js"),
+        this.destinationPath("tests/" + this.props.packageName + ".spec.js"),
         this.props
       );
     },
@@ -133,18 +133,36 @@ module.exports = yeoman.Base.extend({
         this.props
       );
       this.fs.copyTpl(
-        this.templatePath("src/_component.jsx"),
-        this.destinationPath("src/" + this.props.packageName + ".jsx"),
+        this.templatePath("stories/styles.scss"),
+        this.destinationPath("stories/styles.scss"),
+        this.props
+      );
+      this.fs.copyTpl(
+        this.templatePath("src/_component.js"),
+        this.destinationPath("src/" + this.props.packageName + ".js"),
         this.props
       );
     },
-    demo: function () {
+    storybook: function () {
+      this.fs.copy(
+        this.templatePath(".storybook"),
+        this.destinationPath(".storybook")
+      );
+      this.fs.copy(
+        this.templatePath("stories/welcome"),
+        this.destinationPath("stories/welcome")
+      );
       this.fs.copyTpl(
-        this.templatePath("demo/_index.jsx"),
-        this.destinationPath("demo/index.jsx"),
+        this.templatePath("stories/_index.js"),
+        this.destinationPath("stories/index.js"),
         this.props
       );
-    }
+      this.fs.copyTpl(
+        this.templatePath("stories/_component.js"),
+        this.destinationPath("stories/" + this.props.packageName + ".js"),
+        this.props
+      );
+    },
   },
 
   install: function () {

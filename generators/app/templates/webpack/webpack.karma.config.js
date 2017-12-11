@@ -1,5 +1,4 @@
 const extend = require('lodash/extend');
-const path = require('path');
 
 module.exports = function (baseConfig) {
   return extend({}, baseConfig, {
@@ -11,11 +10,11 @@ module.exports = function (baseConfig) {
 
     devtool: 'inline-source-map',
 
-    entry: {},
+    entry: '',
 
     resolve: {
-      extensions: ["", ".webpack.js", ".web.js", ".js", ".jsx", ".css", ".scss"],
-      modulesDirectories: ["node_modules", "src"]
+      extensions: ['.js', '.jsx', '.css', '.scss', '.saas'],
+      modules: ['node_modules', 'src']
     },
 
     output: {},
@@ -28,9 +27,9 @@ module.exports = function (baseConfig) {
     },
 
     module: {
-      loaders: []
-        .concat(baseConfig.module.loaders)
-        .concat(require('./helpers/loaders/json'))
+      rules: []
+        .concat(baseConfig.module.rules)
+        .concat(require('./helpers/rules/json'))
     },
 
     plugins: []

@@ -1,11 +1,11 @@
-import TestComponent from '../src/<%= packageName %>';
+import <%= componentName %> from '../src/<%= packageName %>';
 import { shallow } from 'enzyme';
 import React from 'react';
 
-describe('test-component', () => {
+describe('<%= componentName %>', () => {
   describe('Mounting', () => {
     it('should render into the document', () => {
-      const component = shallow(<TestComponent />);
+      const component = shallow(<<%= componentName %> />);
       expect(component).toBeDefined();
     });
   });
