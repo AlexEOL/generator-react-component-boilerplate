@@ -1,3 +1,3 @@
 import './welcome';
-import './<%= componentName %>';
+import './<%= packageName %>';
 

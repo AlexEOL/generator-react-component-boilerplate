@@ -157,9 +157,10 @@ module.exports = yeoman.Base.extend({
         this.destinationPath("stories/index.js"),
         this.props
       );
+
       this.fs.copyTpl(
         this.templatePath("stories/_component.js"),
-        this.destinationPath("stories/" + this.props.packageName + ".js"),
+        this.destinationPath("stories/" + this.props.packageName + "/index.js"),
         this.props
       );
     },

@@ -15,12 +15,8 @@
   "parser": "babel-eslint",
   "rules": {
     "no-console": 1,
-    "react/prefer-stateless-function": 0,
-    "arrow-body-style": 0,
-    "import/imports-first": 0,
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
-    "linebreak-style": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/require-default-props": 0,
     "comma-dangle": ["error", {
@@ -30,6 +26,7 @@
       "exports": "always-multiline",
       "functions": "ignore"
     }],
-    "import/first": 0
+    "import/first": 0,
+    "import/no-named-default": 0
   }
 }
