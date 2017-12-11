@@ -15,7 +15,7 @@ module.exports = yeoman.Base.extend({
       {
         type: "input",
         name: "projectName",
-        message: "What is your Package project name? (e.g., "new-component")",
+        message: "What is your Package project name? (e.g., 'new-component')",
         default: "new-component"
       }
     ];
@@ -133,8 +133,8 @@ module.exports = yeoman.Base.extend({
         this.props
       );
       this.fs.copyTpl(
-        this.templatePath("stories/styles.scss"),
-        this.destinationPath("stories/styles.scss"),
+        this.templatePath("src/styles.scss"),
+        this.destinationPath("src/styles.scss"),
         this.props
       );
       this.fs.copyTpl(

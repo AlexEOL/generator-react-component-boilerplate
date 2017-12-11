@@ -56,7 +56,8 @@
     "test": "better-npm-run test",
     "prepublish": "npm run build",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "eslint-fix": "eslint --fix ./src"
   },
   "betterScripts": {
     "build:prod": {
