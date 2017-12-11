@@ -5,9 +5,7 @@ import React from 'react';
 
 storiesOf('<%= componentName %>', module)
   .add('simple example', () => (
-    <<%= componentName %>
-      onClick={action('onClick')}
-    >
-      Button
+    <<%= componentName %>>
+      <%= componentName %> content
     </<%= componentName %>>
   ));

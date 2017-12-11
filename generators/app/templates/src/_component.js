@@ -5,17 +5,16 @@ import React from 'react';
 export default
 class <%= componentName %> extends React.PureComponent {
   render() {
-    const { children, className, onClick } = this.props;
+    const { children, className } = this.props;
     return (
-      <button
-        onClick={onClick}
+      <div
         className={classnames(
-          'button',
+          'b-<%= componentName %>',
           className
         )}
       >
         {children}
-      </button>
+      </div>
     );
   }
 }
@@ -23,6 +22,5 @@ class <%= componentName %> extends React.PureComponent {
 <%= componentName %>.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
-  onClick: PropTypes.func,
 };
 <%= componentName %>.defaultProps = {};
